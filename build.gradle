@@ -13,8 +13,17 @@ repositories {
 }
 
 dependencies {
+	//spring
 	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	//extensions
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	//db
+	runtimeOnly 'org.postgresql:postgresql'
 }
 
 tasks.named('test') {
