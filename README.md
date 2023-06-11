@@ -1,5 +1,5 @@
 # RestService
-Application requires PostgreSQL Database running in order to work.
+Application requires PostgreSQL Database running in order to work. The project includes test_dump.sql from which it is possible to build the database.
 
 In the resources folder there is the application.yml file, where database connection details can be set.
 
