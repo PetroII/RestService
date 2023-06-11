@@ -1,5 +1,24 @@
 server.port: 8080
 
 application:
+  db:
+    driverClassName: 'org.postgresql.Driver'
+    connectionString: 'jdbc:postgresql://${application.db.host}:${application.db.port}/${application.db.name}?ApplicationName=${application.db.applicationName}'
+    applicationName: rest-service
+    host: localhost
+    port: 5432
+    name: test
+    user: postgres
+    password: postgres
+    maxPoolSize: 5
+    minimumIdle: 2
+    connectionTimeout: 10_000
+
   connection:
     api: 'https://api.github.com/users'
+
+logging:
+  level:
+    root: INFO
+    org.springframework: INFO
+    com.empik: DEBUG

@@ -16,6 +16,7 @@ dependencies {
 	//spring
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
 	//extensions
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
@@ -24,6 +25,10 @@ dependencies {
 
 	//db
 	runtimeOnly 'org.postgresql:postgresql'
+
+	//test
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation group: 'org.mockito', name: 'mockito-core', version: '4.11.0'
 }
 
 tasks.named('test') {
